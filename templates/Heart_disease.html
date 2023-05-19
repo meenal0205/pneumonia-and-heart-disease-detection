@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
+    <title>Input Image With Preview Image</title>
+  </head>
+  <body>
+    <div class="">
+      <form
+        method="post"
+        class="container form box"
+        enctype="multipart/form-data"
+      >
+        <label for="age"> Age : <input type="text" name="age" /> </label>
+
+        <label for="sex">
+          Gender :
+          <select name="sex">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </label>
+
+        <label for="chestpain">
+          Chest Pain Level :
+          <select name="chestpain">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+
+        <label for="restingbp">
+          Resting Blood Pressure : <input type="text" name="restingbp" />
+        </label>
+
+        <label for="chol">
+          Serum cholestrol (mg/dl) : <input type="text" name="chol" />
+        </label>
+
+        <label for="fbs">
+          Is your Fasting Blood Sugar > 129 mg/dl :
+          <select name="fbs">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+        <label for="rer">
+          Resting Electrocardiographic Results :
+          <select name="rer">
+            <option value="1">low</option>
+            <option value="2">High</option>
+          </select>
+        </label>
+        <label for="maxheartrate">
+          Max Heart Rate : <input type="text" name="maxheartrate" />
+        </label>
+        <label for="diffbreath">
+          Do you experience breathing difficulties after exercise :
+          <select name="diffbreath">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+        <label for="stdi">
+          ST depression induced by exercise relative to rest :
+          <input type="text" name="stdi" />
+        </label>
+        <label for="shiftheart">
+          Is there extreme a shift in your heart rate after exercising :
+          <select name="shiftheart">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select>
+        </label>
+        <label for="thal">
+          Thalassemia Status :
+          <select name="thal">
+            <option value="0">Normal</option>
+            <option value="1">Fixed Defect</option>
+            <option value="2">Reversable Defect</option>
+          </select>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

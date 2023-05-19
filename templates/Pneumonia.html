@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
+    <title>Input Image With Preview Image</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" method="post" class="form" enctype="multipart/form-data">
+        <input
+          type="file"
+          name="imagefile"
+          id="file"
+          onchange="getImagePreview(event)"
+        />
+        <div id="preview" class="img-area">
+          <i class="bx bxs-cloud-upload icon"></i>
+          <h3>Upload Image</h3>
+        </div>
+        <button
+          class="button-34"
+          role="button"
+          onchange="getImagePreview(event)"
+          onclick="Show_hide"
+        >
+          Select Image
+        </button>
+      </form>
+      {{result}}
+    </div>
+
+    <script type="text/javascript">
+      function getImagePreview(event) {
+        var image = URL.createObjectURL(event.target.files[0]);
+        var imagediv = document.getElementById("preview");
+        var newimg = document.createElement("img");
+        imagediv.innerHTML = "";
+        newimg.src = image;
+        newimg.width = "300";
+        imagediv.appendChild(newimg);
+      }
+      var a = 0;
+      function Show_hide() {
+        if (a == 1) {
+          document.getElementById("content").style.display = "inline";
+          return (a = 0);
+        } else {
+          document.getElementById("content").style.display = "";
+          return (a = 1);
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="new.css">
+</head>
+<body>
+<center>
+    <div class="container">
+        <h2>👀Predict Pueumonia using X-Ray images ......</h2>
+    </div>
+    <div class="main">
+        <form>
+            <input type="file" id="file">
+        </form>
+    </div>
+</center>
+    
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Upload Button</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="new.css">
+
+</head>
+
+<body>
+
+    <div class="upload-btn">
+
+        <div class="text">
+            <span class="material-icons">attach_file</span>
+            Document.pdf
+        </div>
+
+        <div class="btn">
+            <div class="btn-text">Upload</div>
+        </div>
+
+        <div class="progress">
+            <p><i class="ri-check-fill"></i>Completed</p>
+        </div>
+
+    </div>
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> -->

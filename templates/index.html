@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Healthcare.</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" style="--i:1;" class="active">Predict</a>
+                     <ul>
+                        <li><a href="/pneumonia">Pneumonia</a></li>
+                        <li><a href="/heart_disease">Heart Disease</a></li>
+
+                     </ul>
+                
+                <li><a href="#" style="--i:2;">Prevention</a></li>
+                <li><a href="#" style="--i:3;">About</a></li>
+                </li>
+            </ul>
+            
+
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Early detection is critical</h3>
+            <h1>Welcome to Disease Detector!</h1>
+        
+        <a href="#" class="btn">Detect</a>
+
+        </div>
+        <div class="home-img">
+            <img src="{{ url_for('static', filename='Dr.Bhena.jpeg') }}" alt="">
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>

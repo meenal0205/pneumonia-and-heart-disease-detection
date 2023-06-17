@@ -41,11 +41,12 @@ x_scaled_data = pd.DataFrame(x_scaled, columns=x.columns)
 
 x_train, x_test, y_train, y_test = train_test_split(
     x_scaled, y, test_size=0.2, random_state=42)
+
+
 model_path = 'C:\EDAI_SEM_2\model_2.h5'
 model = load_model(model_path)
 model.make_predict_function()
-
-
+#
 model5 = GradientBoostingClassifier()
 model5.fit(x_train, y_train)
 y_pred5 = model5.predict(x_test)
